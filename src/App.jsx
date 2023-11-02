@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Componentes/Home";
 import Login from "./Componentes/Login/Login";
 import { UserStorage } from "./UserContext";
+import User from "./Componentes/User/User";
+import ProtectedRouter from "./Componentes/Helper/ProtectedRouter";
 
 const App = () => {
   return (
@@ -15,7 +17,15 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
+            <Route path="login/*" element={<Login />} />
+            <Route
+              path="conta/*"
+              element={
+                <ProtectedRouter>
+                  <User />
+                </ProtectedRouter>
+              }
+            />
           </Routes>
           <Footer />
         </UserStorage>
