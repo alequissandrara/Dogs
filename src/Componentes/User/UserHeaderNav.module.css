@@ -114,9 +114,10 @@
   cursor: pointer;
 }
 
-.navMobile a:hover svg > *,
-.navMobile button:hover svg > * {
+.navMobile a:hover,
+.navMobile button:hover {
   fill: #fb1;
+  color: #fb1;
 }
 
 .navMobile button {
