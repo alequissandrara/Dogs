@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FeedPhotosItem.module.css";
+import Image from "../Helper/Image";
 
 const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   // Verifica se a propriedade 'photo' é definida
@@ -14,7 +15,7 @@ const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   return (
     <li className={styles.photo} onClick={handleClick}>
       {/* Verifica se 'photo.src' é definido antes de acessá-lo */}
-      {photo.src && <img src={photo.src} alt={photo.title} />}
+      {photo.src && <Image src={photo.src} alt={photo.title} />}
       <span className={styles.visualizacao}>{photo.acessos}</span>
     </li>
   );
