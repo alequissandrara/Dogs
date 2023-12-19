@@ -5,10 +5,8 @@ import dogFooter from "../Assets/dogs-footer.svg";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>
-        <img src={dogFooter} />
-        Dogs. Alguns direitos reservados.
-      </p>
+      <img src={dogFooter} className={styles.imgFooter} />
+      <p>Dogs. Alguns direitos reservados.</p>
     </footer>
   );
 };
